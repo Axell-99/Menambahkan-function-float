@@ -1,0 +1,107 @@
+//Nomor 1
+//#include <iostream>
+//using namespace std;
+//
+//int main () {
+//    string nama,tanggallahir;
+//    nama="Yoga Axel Baim Pratama";
+//    tanggallahir="10-07-08";
+//    
+//    cout << "Nama Lengkap Anda :" << nama << endl;
+//    cout << "Tanggal Lahir Anda :"<< tanggallahir << endl;
+//}
+//
+//
+//Nomor 2
+//#include <iostream>
+//using namespace std;
+//int main(){
+//    int a=89875654;
+//    int b=4;
+//    int c=a%b;
+//    cout<< "Nilai sisa bagi adalah : "<< c <<endl;
+//    
+//    if (c==0){
+//        cout<<"Anda Mengerjakan Soal A"<<endl;
+//    }
+//    else if (c==1){
+//        cout<<"Anda Mengerjakan Soal B"<<endl;
+//    }
+//    else if (c==2){
+//        cout<<"Anda Mengerjakan Soal C"<<endl;
+//    }
+//    else{
+//        cout<<"Anda Mengerjakan Soal D"<<endl;
+//    }
+//}
+//}
+//
+////Nomor 3
+//#include <iostream>
+//using namespace std;
+//
+//int main(){
+//
+//    int hasil[4];
+//    cout << "Silahkan Masukkan Jarak Yang Ingin Di Cek : "<<endl;
+//    for(int i=0;i<4;++i){
+//        cin >> hasil[i];
+//        }
+//    int total = 0;
+//    for(int i=0;i<4;++i){
+//        if (hasil[i] > total){
+//            total = hasil[i];
+//            }
+//}
+//    cout << "Jarak Yang Paling Jauh adalah: " << total << "KM" <<endl;
+//}
+//
+//}
+
+//#include <iostream>
+//#include <cstdlib>
+//
+//using namespace std;
+//int main(){
+//    
+//    char lanjut;
+//    while (true){
+//        cout <<"Lempar dadu? (y/n)";
+//        cin >> lanjut;
+//        if (lanjut == 'y'){
+//            cout << 1 +( rand()% 100000) <<endl;
+//        }else if (lanjut == 'n'){
+//            break;
+//        }else{
+//            cout << "Tolong ketik y / n\n";
+//        }
+//        
+//    }
+//    cin.get();
+//    return 0;
+//}
+#include <iostream>
+using namespace std;
+
+float cariRataRata(float jarak[], int ukuran);
+
+int main() {
+    float hasil[4];
+    cout << "Silahkan Masukkan Jarak Yang Ingin Di Cek : " << endl;
+    for(int i = 0; i < 4; ++i) {
+        cin >> hasil[i];
+    }
+
+    float rataRata = cariRataRata(hasil, 4);
+    cout << "Rata-Rata Jarak adalah: " << rataRata << " KM" << endl;
+
+    return 0;
+}
+
+float cariRataRata(float jarak[], int ukuran) {
+    float total = 0;
+    for(int i = 0; i < ukuran; ++i) {
+        total += jarak[i];
+    }
+    return total / ukuran;
+}
